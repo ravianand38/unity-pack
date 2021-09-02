@@ -1,0 +1,47 @@
+blic class Lopsq : MonoBehaviour
+{
+    public int playerHealth;
+
+   
+    void Start()
+    {
+        
+
+   }
+
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && IsDead() == false )
+        {
+            CheckHealth(Random.Range(5, 12));
+        
+        }
+    }
+
+    
+
+   public void CheckHealth(int damageAmount)
+    {
+
+        playerHealth -= damageAmount;
+
+        if(playerHealth < 1)
+        {
+            
+            playerHealth = 0;
+            Debug.Log("Player is Dead");
+             
+        }else {
+            Debug.Log("Player is Healther");
+        }
+
+    }
+
+
+   public bool IsDead()
+    {
+
+        return playerHealth < 1;
+    }
+}

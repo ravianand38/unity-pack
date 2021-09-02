@@ -1,0 +1,33 @@
+
+
+public class Lopsq : MonoBehaviour
+{
+    public GameObject[] player;
+
+    void Start()
+    {
+
+        player = CheckPlayer();
+    }
+
+
+    private void Update()
+    {
+
+    }
+
+
+
+    GameObject[] CheckPlayer()
+    {
+        GameObject[] allPlayer  = GameObject.FindGameObjectsWithTag("Player");
+
+
+        foreach(var p in allPlayer)
+        {
+            p.GetComponent<MeshRenderer>().material.color = new Color(Random.value, Random.value, Random.value);
+        }
+        return allPlayer;
+    }
+
+}

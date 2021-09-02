@@ -1,0 +1,34 @@
+
+
+using UnityEngine;
+
+
+public class Lopsq : MonoBehaviour
+{
+    public Vector3[] positions;
+    public int _randomIndex;
+
+    void Start()
+    {
+        _randomIndex = GetRandom();
+        transform.position = GetPositions(_randomIndex);
+        Debug.Log("Random Position" + _);
+    }
+
+
+    private void Update()
+    {
+
+    }
+
+    int GetRandom()
+    {
+        return Random.Range(0, positions.Length);
+    }
+
+    Vector3 GetPositions(int index)
+    {
+        return positions[index];
+    }
+
+}

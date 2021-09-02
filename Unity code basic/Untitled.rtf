@@ -1,0 +1,79 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red181\green129\blue207;\red0\green0\blue0;\red255\green255\blue255;
+\red104\green148\blue209;\red132\green134\blue132;\red223\green120\blue54;}
+{\*\expandedcolortbl;;\cssrgb\c76471\c59216\c84706;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000;
+\cssrgb\c47843\c65098\c85490;\cssrgb\c58824\c59608\c58824;\cssrgb\c90588\c54902\c27059;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 using\cf4 \strokec4  UnityEngine;\
+\cf2 \strokec2 using\cf4 \strokec4  System.Collections;\
+\
+\cf2 \strokec2 public\cf4 \strokec4  \cf2 \strokec2 class\cf4 \strokec4  \cf5 \strokec5 Player\cf4 \strokec4 \
+\{\
+    \cf6 \strokec6 //Member variables can be referred to as\cf4 \strokec4 \
+    \cf6 \strokec6 //fields.\cf4 \strokec4 \
+    \cf2 \strokec2 private\cf4 \strokec4  \cf2 \strokec2 int\cf4 \strokec4  experience;\
+\
+    \cf6 \strokec6 //Experience is a basic property\cf4 \strokec4 \
+    \cf2 \strokec2 public\cf4 \strokec4  \cf2 \strokec2 int\cf4 \strokec4  Experience\
+    \{\
+        \cf2 \strokec2 get\cf4 \strokec4 \
+        \{\
+            \cf6 \strokec6 //Some other code\cf4 \strokec4 \
+            \cf2 \strokec2 return\cf4 \strokec4  experience;\
+        \}\
+        \cf2 \strokec2 set\cf4 \strokec4 \
+        \{\
+            \cf6 \strokec6 //Some other code\cf4 \strokec4 \
+            experience = \cf2 \strokec2 value\cf4 \strokec4 ;\
+        \}\
+    \}\
+\
+    \cf6 \strokec6 //Level is a property that converts experience\cf4 \strokec4 \
+    \cf6 \strokec6 //points into the leve of a player automatically\cf4 \strokec4 \
+    \cf2 \strokec2 public\cf4 \strokec4  \cf2 \strokec2 int\cf4 \strokec4  Level\
+    \{\
+        \cf2 \strokec2 get\cf4 \strokec4 \
+        \{\
+            \cf2 \strokec2 return\cf4 \strokec4  experience / \cf7 \strokec7 1000\cf4 \strokec4 ;\
+        \}\
+        \cf2 \strokec2 set\cf4 \strokec4 \
+        \{\
+            experience = \cf2 \strokec2 value\cf4 \strokec4  * \cf7 \strokec7 1000\cf4 \strokec4 ;\
+        \}\
+    \}\
+\
+    \cf6 \strokec6 //This is an example of an auto-implemented\cf4 \strokec4 \
+    \cf6 \strokec6 //property\cf4 \strokec4 \
+    \cf2 \strokec2 public\cf4 \strokec4  \cf2 \strokec2 int\cf4 \strokec4  Health\{ \cf2 \strokec2 get\cf4 \strokec4 ; \cf2 \strokec2 set\cf4 \strokec4 ;\}\
+\}\
+\
+\
+\
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \strokec2 using\cf4 \strokec4  UnityEngine;\
+\cf2 \strokec2 using\cf4 \strokec4  System.Collections;\
+\
+\cf2 \strokec2 public\cf4 \strokec4  \cf2 \strokec2 class\cf4 \strokec4  \cf5 \strokec5 Game\cf4 \strokec4  : MonoBehaviour \
+\{\
+    \cf2 \strokec2 void\cf4 \strokec4  \cf5 \strokec5 Start\cf4 \strokec4  \cf7 \strokec7 ()\cf4 \strokec4  \
+    \{\
+        Player myPlayer = \cf2 \strokec2 new\cf4 \strokec4  Player();\
+\
+        \cf6 \strokec6 //Properties can be used just like variables\cf4 \strokec4 \
+        myPlayer.Experience = \cf7 \strokec7 5\cf4 \strokec4 ;\
+        \cf2 \strokec2 int\cf4 \strokec4  x = myPlayer.Experience;\
+    \}\
+\}\
+\pard\pardeftab720\partightenfactor0
+\cf4 \
+\
+\
+\
+\
+}

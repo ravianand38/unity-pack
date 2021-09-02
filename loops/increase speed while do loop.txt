@@ -1,0 +1,51 @@
+ public int speed;
+    public int maxSpeed;
+    void Start()
+    {
+        maxSpeed = Random.Range(60, 120);
+        StartCoroutine(SPEED());
+    }
+
+
+    IEnumerator SPEED()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(.2f);
+            speed += 5;
+            if(speed > maxSpeed)
+            {
+                break;
+            }
+        }
+
+
+
+
+ USING DO LOOP SAME RESULT++++++
+
+
+
+
+public class Lopsq : MonoBehaviour
+{
+    public int speed;
+    public int maxSpeed;
+    void Start()
+    {
+        maxSpeed = Random.Range(60, 120);
+        StartCoroutine(SPEED());
+    }
+
+
+    IEnumerator SPEED()
+    {
+        do
+        {
+            speed += 4;
+            yield return new WaitForSeconds(.2f);
+        } while (speed < maxSpeed);
+    }
+
+   
+}

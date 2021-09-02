@@ -1,0 +1,25 @@
+
+    public string[] names;
+    public string[] items = new string[5];
+    public int[] ages = new int[]{3,5,8,10,300 };
+    public int randomID;
+    void Start()
+    {
+      
+
+    }
+
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            randomID = Random.Range(0, names.Length);
+            Debug.Log(randomID);
+            Debug.Log("Name: " + names[randomID] + "age: " + ages[randomID] + "item: " +  items[randomID]);
+        }
+    }
+
+
+
+}

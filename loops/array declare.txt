@@ -1,0 +1,19 @@
+ public string[] names;
+    public string[] items = new string[5];
+    public int[] ages = new int[]{3,5,8,10,300 };
+   
+    void Start()
+    {
+      
+
+    }
+
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            Debug.Log("Name:  "  + names[0]  +  "age;  "  + ages[2]  +  "item:  "  +  items[3]);
+        }
+    }
+

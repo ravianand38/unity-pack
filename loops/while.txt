@@ -1,0 +1,30 @@
+public class Lopsq : MonoBehaviour
+{
+    int aplles;
+    void Start()
+    {
+        while (aplles < 50)
+        {
+            Debug.Log("it have aplles");
+            aplles++;
+        }
+        StartCoroutine(PawnLoop());
+    }
+
+    
+    void Update()
+    {
+        
+    }
+
+    IEnumerator PawnLoop()
+    {
+
+        while (true)
+        {
+            yield return new WaitForSeconds(1.0f);
+            Debug.Log("Enemt spawning every seconds");
+        }
+
+    }
+}

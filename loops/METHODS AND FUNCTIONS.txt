@@ -1,0 +1,70 @@
+public GameObject cube;
+
+   
+    void Start()
+    {
+        
+    }
+
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+
+         MyMethod(cube, Color.red);
+        }
+    }
+
+    void MyMethod(GameObject obj, Color changeCol)
+    {
+        cube.GetComponent<MeshRenderer>().material.color = changeCol;
+    }
+
+}
+
+
+CHECKING PLAYER HEALTH AND DEAD
+
+
+
+
+    public int playerHealth;
+
+    public bool isDead;
+    void Start()
+    {
+        playerHealth = 100;
+
+
+   }
+
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && isDead == false)
+        {
+            CheckHealth(Random.Range(5, 12));
+        
+        }
+    }
+
+    
+
+   public void CheckHealth(int damageAmount)
+    {
+
+        playerHealth -= damageAmount;
+
+        if(playerHealth < 1)
+        {
+            isDead = true;
+            playerHealth = 0;
+            Debug.Log("Player is Dead");
+             
+        }else {
+            Debug.Log("Player is Healther");
+        }
+
+    }
+}

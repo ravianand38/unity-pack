@@ -1,0 +1,19 @@
+  public int[] names;
+    public string[] items; 
+    void Start()
+    {
+      
+
+    }
+
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            for (int i = 0; i < items.Length; ++i)
+            {
+                Debug.Log(items[i]);
+            }
+        }
+    }

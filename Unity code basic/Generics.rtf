@@ -1,0 +1,160 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Bold;\f1\froman\fcharset0 Times-Roman;\f2\fmodern\fcharset0 Courier;
+\f3\fnil\fcharset0 Menlo-Regular;\f4\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red181\green129\blue207;\red255\green255\blue255;
+\red104\green148\blue209;\red132\green134\blue132;\red223\green120\blue54;\red38\green38\blue38;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c76471\c59216\c84706;\cssrgb\c100000\c100000\c100000;
+\cssrgb\c47843\c65098\c85490;\cssrgb\c58824\c59608\c58824;\cssrgb\c90588\c54902\c27059;\cssrgb\c20000\c20000\c20000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 SomeClass
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \
+\
+\pard\pardeftab720\sl460\partightenfactor0
+
+\f3\fs32 \cf3 \cb2 \strokec3 using\cf4 \strokec4  UnityEngine;\
+\cf3 \strokec3 using\cf4 \strokec4  System.Collections;\
+\
+\cf3 \strokec3 public\cf4 \strokec4  \cf3 \strokec3 class\cf4 \strokec4  \cf5 \strokec5 SomeClass\cf4 \strokec4  \
+\{\
+    \cf6 \strokec6 //Here is a generic method. Notice the generic\cf4 \strokec4 \
+    \cf6 \strokec6 //type 'T'. This 'T' will be replaced at runtime\cf4 \strokec4 \
+    \cf6 \strokec6 //with an actual type. \cf4 \strokec4 \
+    \cf3 \strokec3 public\cf4 \strokec4  T GenericMethod<T>(T param)\
+    \{\
+        \cf3 \strokec3 return\cf4 \strokec4  param;\
+    \}\
+\}\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs24 \cf2 \strokec2 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf2 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf2 SomeOtherClass 
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \
+\
+\pard\pardeftab720\sl460\partightenfactor0
+
+\f3\fs32 \cf3 \cb2 \strokec3 using\cf4 \strokec4  UnityEngine;\
+\cf3 \strokec3 using\cf4 \strokec4  System.Collections;\
+\
+\cf3 \strokec3 public\cf4 \strokec4  \cf3 \strokec3 class\cf4 \strokec4  \cf5 \strokec5 SomeOtherClass\cf4 \strokec4  : MonoBehaviour \
+\{\
+    \cf3 \strokec3 void\cf4 \strokec4  \cf5 \strokec5 Start\cf4 \strokec4  \cf7 \strokec7 ()\cf4 \strokec4  \
+    \{\
+        SomeClass myClass = \cf3 \strokec3 new\cf4 \strokec4  SomeClass();\
+\
+        \cf6 \strokec6 //In order to use this method you must\cf4 \strokec4 \
+        \cf6 \strokec6 //tell the method what type to replace\cf4 \strokec4 \
+        \cf6 \strokec6 //'T' with.\cf4 \strokec4 \
+        myClass.GenericMethod<\cf3 \strokec3 int\cf4 \strokec4 >(\cf7 \strokec7 5\cf4 \strokec4 );\
+    \}\
+\}\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs24 \cf2 \cb1 \strokec2 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf2 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf2 GenericClass
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \
+\
+\pard\pardeftab720\sl460\partightenfactor0
+
+\f3\fs32 \cf3 \cb2 \strokec3 using\cf4 \strokec4  UnityEngine;\
+\cf3 \strokec3 using\cf4 \strokec4  System.Collections;\
+\
+\pard\pardeftab720\sl460\partightenfactor0
+\cf6 \strokec6 //Here is a generic class. Notice the generic type 'T'.\cf4 \strokec4 \
+\cf6 \strokec6 //'T' will be replaced with an actual type, as will also \cf4 \strokec4 \
+\cf6 \strokec6 //instances of the type 'T' used in the class.\cf4 \strokec4 \
+\pard\pardeftab720\sl460\partightenfactor0
+\cf3 \strokec3 public\cf4 \strokec4  \cf3 \strokec3 class\cf4 \strokec4  \cf5 \strokec5 GenericClass\cf4 \strokec4  <T>\
+\{\
+    T item;\
+\
+    \cf3 \strokec3 public\cf4 \strokec4  \cf3 \strokec3 void\cf4 \strokec4  \cf5 \strokec5 UpdateItem\cf7 \strokec7 (T newItem)\cf4 \strokec4 \
+    \{\
+        item = newItem;\
+    \}\
+\}\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs24 \cf2 \strokec2 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf2 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf2 GenericClassExample
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \
+\
+\pard\pardeftab720\sl460\partightenfactor0
+
+\f3\fs32 \cf3 \cb2 \strokec3 using\cf4 \strokec4  UnityEngine;\
+\cf3 \strokec3 using\cf4 \strokec4  System.Collections;\
+\
+\cf3 \strokec3 public\cf4 \strokec4  \cf3 \strokec3 class\cf4 \strokec4  \cf5 \strokec5 GenericClassExample\cf4 \strokec4  : MonoBehaviour \
+\{\
+    \cf3 \strokec3 void\cf4 \strokec4  \cf5 \strokec5 Start\cf4 \strokec4  \cf7 \strokec7 ()\cf4 \strokec4  \
+    \{        \
+        \cf6 \strokec6 //In order to create an object of a generic class, you must\cf4 \strokec4 \
+        \cf6 \strokec6 //specify the type you want the class to have.\cf4 \strokec4 \
+        GenericClass<\cf3 \strokec3 int\cf4 \strokec4 > myClass = \cf3 \strokec3 new\cf4 \strokec4  GenericClass<\cf3 \strokec3 int\cf4 \strokec4 >();\
+\
+        myClass.UpdateItem(\cf7 \strokec7 5\cf4 \strokec4 );\
+    \}\
+\}\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs24 \cf2 \cb1 \strokec2 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs32 \cf8 \cb4 \strokec8 \
+\
+\
+}
